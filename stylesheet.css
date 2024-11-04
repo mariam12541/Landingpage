@@ -1,0 +1,145 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin: 0;
+	background-color:black;
+}
+li,a{
+font: italic bold 1.2em "Fira Sans", sans-serif;
+font-weight: 500;
+font-size: 15px;
+color: #edf0f1;
+text-decoration: none;
+}
+.navbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display:flex;
+    justify-content: space-between;
+    align-items: right;
+    padding: 10px 10%;
+    background-color: black;	
+    z-index: 999;
+}
+.logo {
+  width: 60px;
+  margin-right:auto;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 1000;
+}
+.navlink{
+	list-style: none;
+}
+.navlink li{
+      display: inline-block;
+      padding:0px 30px;
+      margin-top: 20px;
+}
+  .navlink li a {
+  transition: all 0.6s ease 0s;
+}
+   .navlink li a:hover{
+  background-color:#f2f2f2;
+  color: #000;
+}
+.img{
+	 display: block;
+  width: 100vw; 
+  height: auto;
+  margin-top: 5px; 
+  z-index: -1;
+}
+body{
+	overflow-x: hidden; 
+	padding-top: 60px;
+	background-color: black;
+}
+h2,p{
+	position: absolute;
+	top:200px;
+	left: 10px;
+	background-color: rgba(0,0,0,0);
+	padding:40px;
+	margin:0;
+}
+p{
+	margin-top: 60px;
+}
+h2{
+ white-space: nowrap;
+ overflow: hidden;
+ font-size: 45px;
+ font-family: cursive;
+ animation: 
+ typing 3s steps(60, end),
+ cursor 1.5s step-end infinite alternate;
+}
+p{
+white-space: nowrap;
+ overflow: hidden;
+ font-size: 20px;
+ font-family: cursive;
+ animation: 
+ typing 4s steps(80, end),
+ cursor 5s step-end infinite alternate;	
+}
+@keyframes cursor{
+	50%{
+		border-color: transparent;
+	}
+}
+@keyframes typing{
+	from { 
+		width:0
+	 }
+    to{
+    	width: 100%;
+    }
+}
+pre{
+	overflow: hidden;
+	font-size: 25px;
+	font-family: monospace;
+	font-weight: bold;
+	position: absolute;
+	top:550px;
+	right: 10px;
+	background-color: rgba(0,0,0,0);
+	padding:40px;
+	margin:0;
+}
+.btn{
+	padding: 15px 25px;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    border-radius: 12px;
+    top:620px;
+	right: 50px;
+	background-color: #d7dbdd;
+}
+@media only screen and (max-width: 768px){
+	.navlink li{
+		padding: 0px 15px;
+	}
+	h2{
+		font-size: 6vw;
+	}
+	p{
+		font-size: 3vw;
+	}
+	pre{
+		font-size: 3vw;
+		top:60%;
+	}
+	.btn{
+		padding: 3vw 5vw;
+		border-radius: 2vw;
+		top: 75%;
+	}
+}
